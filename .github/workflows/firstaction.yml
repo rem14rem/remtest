@@ -2,8 +2,6 @@
 
 name: Hello Actions
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: 
@@ -24,7 +22,7 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, $name!
 
-pull_requests_only:
+  pull_requests_only:
    
     runs-on: ubuntu-latest
     if: github.envent_name == 'pull_request'
