@@ -25,7 +25,7 @@ jobs:
   pull_requests_only:
    
     runs-on: ubuntu-latest
-    if: github.envent_name == 'pull_request'
+    if: github.event_name == 'pull_request'
     needs: build 
     steps:
     - name: Run a multi-line script
