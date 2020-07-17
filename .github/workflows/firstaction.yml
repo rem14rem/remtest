@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Hello Actions
 
 on:
@@ -11,8 +9,7 @@ on:
 
 env:
   name: Bobbo
-jobs:
-   
+jobs: 
   build:
    
     runs-on: ubuntu-latest
