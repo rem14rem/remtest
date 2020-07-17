@@ -11,21 +11,26 @@ on:
     pull_request:
       types: [closed]
 
-    
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+env:
+  name: Bobbo
 jobs:
    
   build:
    
     runs-on: ubuntu-latest
-     
+    env:
+      name: Bobby 
     steps:
-    
-    - uses: actions/checkout@v2   
     - name: Run a one-line script
-      run: echo Hello, world Bob!
+      run: echo Hello, $name!
+
+pull_requests_only:
+   
+    runs-on: ubuntu-latest
+    if: github.envent_name == 'pull_request'
+    needs: build 
+    steps:
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
-        echo test, and deploy your project.
+        echo Hi, $name.
