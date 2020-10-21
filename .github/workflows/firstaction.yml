@@ -17,7 +17,7 @@ jobs:
       name: Bobby M
     steps:
     - name: Run a one-line script
-      run: echo Hello, $name!
+      run: echo Hello, $name! How are you?
 
   pull_requests_only:
    
